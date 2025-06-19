@@ -28,31 +28,44 @@ body{
 #recipe-cards{
     background-color: rgb(212, 196, 212,0.5);
     width: 80%;
-    height: 70vh;
     border: 1px solid white;
-    margin-top: 3rem;
     border-radius: 5%;
-    padding: 20px;
+    padding: 30px;
     display: grid;
+    /* grid-template-columns: 30% 30% 30%; */
+     grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+    grid-auto-rows: 300px;
+    row-gap: 20px;
+    column-gap: 20px;
     z-index: 1;
     
 
 }
-#card{
-    height: 300px;
-    width: 30%;
-    display: flex;
+.card{
+    /* height: 300px; */
+    /* width: 30%; */
+    /* display: flex;
     flex-direction: column;
-    background-color: rgb(235, 226, 234);
+    background-color: #ebe2ea;
     justify-content: center;
     align-items: center;
-    border-radius: 5%;
+    border-radius: 5%; */
 }
-#card-img{
-    width: 90%;
-    height: 60%;
+.card-img{
+    /* width: 90%; */
+    /* height: 60%; */
 }
-#card-img img{
-    width: 100%;
-    height: 100%;
+.card-img img{
+    /* width: 100%; */
+    /* height: 100%; */
+}
+.recipe-name{
+    color: darkred;
+    font-weight: bold;
+}
+.card a{
+    text-decoration: none;
+}
+.show-details{
+    margin-top: 10px;
 }

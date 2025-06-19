@@ -6,5 +6,7 @@ document.querySelector("#submit-form").addEventListener('submit', (e) => {
      const query = document.querySelector("#ingredient-name").value.trim();
      
      if(query != "") {
-        window.location.href = `main.html?search=${encodeURIComponent(query)}`;    }
-    })
+        window.location.href = `main.html?search=${encodeURIComponent(query)}`;
+
+    }
+})

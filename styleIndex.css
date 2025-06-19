@@ -1,0 +1,193 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#landing-page {
+    height: 100vh;
+    width: 100%;
+    background-color:  #FFEB3B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+@keyframes white-circle-rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    
+}
+#white-circle{
+    height: 100%;
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    animation : white-circle-rotation 15s linear infinite;
+}
+#white-circle img {
+    height: 100%;
+    width: 70%;
+   
+    
+}
+
+#main-box {
+    height: 80%;
+    width: 50%;
+    background-color: rgb(227, 214, 102,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 25%;
+    z-index: 2;
+}
+#app-name{
+    display: flex;
+    justify-content: center;
+    height: 10%;
+    width: 100%;
+    gap: 10px;
+}
+#logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#logo img {
+    height: 50%;
+    width: 70%;
+}
+#name{
+    color: #766b6b;
+    font-weight: bolder;
+    font-style: italic;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+}
+#input-box{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#dev-name{
+    height: 10%;
+}
+#input-box{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+
+}
+#label-box{
+    height: 50%;
+    width: 80%;
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    font-weight: bolder;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+form {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+#ingredient-name{
+    width: 60%;
+    height: 3rem;
+}
+#submit-btn{
+    height: 2rem;
+    width: 5rem;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #4CAF50;
+    color: white;
+}
+#dev-name{
+    height: 10%;
+    font-size: xx-small;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.box{
+    height: 100%;
+    width: 30%;
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.bubble {
+    height: 20%;
+    width: 40%;
+  position: absolute;
+  bottom: 0;
+  opacity: 0;
+  animation: floatUp 6s ease-in-out infinite;
+}
+
+.bubble img {
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* Each bubble gets random delay & position */
+.bubble:nth-child(1) { left: 10px; animation-delay: 0s; --float: 500px; }
+.bubble:nth-child(2) { left: 40px; animation-delay: 0.5s; --float: 600px; }
+.bubble:nth-child(3) { left: 80px; animation-delay: 5s; --float: 600px; }
+.bubble:nth-child(4) { left: 20px; animation-delay: 4s; --float: 600px; }
+.bubble:nth-child(5) { left: 100px; animation-delay: 1s; --float: 400px; }
+.bubble:nth-child(6) { left: 150px; animation-delay: 8s; --float: 550px; }
+.bubble:nth-child(7) { left: 200px; animation-delay: 4.5s; --float: 140px; }
+.bubble:nth-child(8) { left: 250px; animation-delay: 2s; --float: 570px; }
+.bubble:nth-child(9) { left: 180px; animation-delay: 5.6s; --float: 550px; }
+.bubble:nth-child(10){ left: 60px; animation-delay: 1.5s; --float: 600px; }
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(calc(-1 * var(--float))) scale(1.2) rotate(360deg);
+    /* transform: translateY(calc(-1 * var(--float))); */
+    opacity: 1;
+  }
+
+  99% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}

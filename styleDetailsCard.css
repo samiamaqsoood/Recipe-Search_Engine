@@ -33,6 +33,10 @@ body{
 }
 #recipe-name{
     width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
 }
 #second-row{
@@ -40,7 +44,15 @@ body{
     display: flex;
     gap: 10px;
 }
-
+ul{
+    margin-left: 20px;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: blue;
+}
 #recipe-ingrdients{
      width: 50%;
 
@@ -73,6 +85,6 @@ body{
 
 }
 .box:hover{
-    scale: 1.1;
+     background-color: rgba(117, 69, 101);
 
 }

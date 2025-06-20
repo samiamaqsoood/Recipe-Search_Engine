@@ -23,6 +23,19 @@ if (mealID) {
         }
 
         document.querySelector("#instructions").innerHTML += meal.strInstructions;
+        document.querySelector("#Category").innerHTML += meal.strCategory;
+        document.querySelector("#area").innerHTML += meal.strArea;
+        document.querySelector("#YT-link").href = meal.strYoutube;
+        document.querySelector("#YT-link").innerHTML = meal.strYoutube;
+
+        document.querySelector("#Recipe-link").href = meal.Source;
+        document.querySelector("#Recipe-link").innerHTML = meal.strSource;
+
+        document.querySelector("#YT-link").target = "_blank";
+        document.querySelector("#Recipe-link").target = "_blank";
+
+
+
       console.log(meal);
 
     });

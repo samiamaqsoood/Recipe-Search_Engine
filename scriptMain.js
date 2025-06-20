@@ -35,11 +35,16 @@
                    img.style.width = "100%";
                    img.style.height = "100%";
 
-                  
+                   let recipe_name = newDiv.children[1];
+                   recipe_name.innerHTML = ele.strMeal;
 
-                   newDiv.children[1].innerHTML = ele.strMeal;
-
-                  // newDiv.nthChild(3).a.href = `${e.}`
+                   let showDetails = newDiv.children[2];
+                   showDetails.style.marginTop = "10px";
+                   showDetails.style.fontSize = "small";
+                   let anchor = showDetails.querySelector("a"); // find the <a> tag inside
+                   anchor.href = `detailCard.html?id=${ele.idMeal}`; // set link
+                   anchor.textContent = "View Details"; // optional: set link text
+                   
 
                    container.appendChild(newDiv);
 

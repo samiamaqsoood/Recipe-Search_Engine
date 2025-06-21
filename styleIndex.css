@@ -29,24 +29,28 @@
     align-items: center;
     position: absolute;
     animation : white-circle-rotation 15s linear infinite;
+    z-index: 1;
 }
 #white-circle img {
     height: 100%;
-    width: 70%;
-   
+    width: 700px;
+    max-width: 700px;
+   min-width: 700px;
     
 }
 
 #main-box {
     height: 80%;
-    width: 50%;
+    width: 500px;
+    max-width: 500px;
+    min-width: 500px;
     background-color: rgb(227, 214, 102,0.5);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     border-radius: 25%;
-    z-index: 2;
+    z-index: 4;
 }
 #app-name{
     display: flex;
@@ -136,10 +140,20 @@ form {
 .box{
     height: 100%;
     width: 30%;
-    z-index: 1;
+    z-index: 3;
     position: relative;
     overflow: hidden;
 
+}
+@media (max-width: 800px) {
+  #rotating-box2 {
+    display: none;
+  }
+
+ #rotating-box1{
+    position: relative;
+    z-index: 2; /* goes under middle */
+  }
 }
 
 .bubble {
@@ -158,8 +172,8 @@ form {
 }
 
 /* Each bubble gets random delay & position */
-.bubble:nth-child(1) { left: 10px; animation-delay: 0s; --float: 500px; }
-.bubble:nth-child(2) { left: 40px; animation-delay: 0.5s; --float: 600px; }
+.bubble:nth-child(1) { left: 10px; animation-delay: 0.7s; --float: 500px; }
+.bubble:nth-child(2) { left: 40px; animation-delay: 0s; --float: 600px; }
 .bubble:nth-child(3) { left: 80px; animation-delay: 5s; --float: 600px; }
 .bubble:nth-child(4) { left: 20px; animation-delay: 4s; --float: 600px; }
 .bubble:nth-child(5) { left: 100px; animation-delay: 1s; --float: 400px; }
